@@ -1,0 +1,22 @@
+If the problems is [runzeli@login1 ~]$ls
+bash: ls: command not found...
+Similar command is: 'lz'
+===t appears the shell still can't find the ls command. This might happen if the PATH variable was completely overridden in your shell, causing the ls command (located in /bin or /usr/bin) to be unavailable.
+
+Try using the absolute path of ls directly:
+
+
+## code
+/bin/ls
+or
+## code
+/usr/bin/ls
+If this works, that means the system can find the ls command, but your PATH environment variable still does not include the directory where ls resides.
+
+To temporarily restore your PATH variable, you can reset it to a more standard value:
+
+
+###Solutions is below
+
+
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
